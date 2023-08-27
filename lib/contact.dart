@@ -23,7 +23,7 @@ class _ContactState extends State<Contact> {
             // width: 45,
             // color: Colors.blue,
             child: Text(
-              "Edit",
+              "Edit ",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           )
