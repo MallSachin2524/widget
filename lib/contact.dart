@@ -167,57 +167,52 @@ class _ContactState extends State<Contact> {
               color: const Color.fromARGB(255, 246, 243, 243),
               height: 10,
             ),
-            Container(
-              // color: Color.fromARGB(255, 153, 153, 153),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // SizedBox(height: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10)),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // SizedBox(height: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10)),
 
-                          // width: 400,
-                          // height: 50,
-                          // color: Colors.white,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 40,
-                                height: 40,
-                                alignment: Alignment.center,
-                                decoration: const BoxDecoration(
-                                    color: Colors.grey, shape: BoxShape.circle),
-                                child: const Text(
-                                  "A",
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                        // width: 400,
+                        // height: 50,
+                        // color: Colors.white,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 40,
+                              alignment: Alignment.center,
+                              decoration: const BoxDecoration(
+                                  color: Colors.grey, shape: BoxShape.circle),
+                              child: Text(
+                                widget.name.substring(0, 1),
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Text(
-                                  "Contact Photo & Poster",
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
-                          ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(16.0),
+                              child: Text(
+                                "Contact Photo & Poster",
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
+                              ),
+                            )
+                          ],
                         ),
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             Container(
               padding: const EdgeInsets.all(8.0),
@@ -256,7 +251,7 @@ class _ContactState extends State<Contact> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -267,7 +262,7 @@ class _ContactState extends State<Contact> {
                   Padding(
                     padding: EdgeInsets.only(left: 8),
                     child: Text(
-                      "+91 9623678461",
+                      widget.mobile.toString(),
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -284,7 +279,7 @@ class _ContactState extends State<Contact> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
@@ -296,7 +291,7 @@ class _ContactState extends State<Contact> {
                   ),
                   SizedBox(height: 6),
                   Text(
-                    "Aniket Godambe",
+                    widget.name.toString(),
                     style: TextStyle(color: Colors.grey),
                   ),
                 ],
